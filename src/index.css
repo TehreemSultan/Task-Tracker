@@ -29,7 +29,7 @@ body {
 
 .btn {
   display: inline-block;
-  background: #000;
+  background: #052f57;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -62,7 +62,7 @@ body {
 }
 
 .task.reminder {
-  border-left: 5px solid green;
+  border-left: 5px solid #06d892;
 }
 
 .task h3 {
@@ -90,11 +90,14 @@ body {
   padding: 3px 7px;
   font-size: 17px;
 }
-
+form{
+  transition:10s;
+}
 .form-control-check {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .form-control-check label {

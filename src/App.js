@@ -7,10 +7,7 @@ import './App.css';
 function App() {
  
   const [showAddTask, setshowAddTask] = useState(false);
-  const [tasks, setTasks] = 
-  useState([
-    {id:1,text:'doctor appointment',day:'feb 6th at 1:30pm',remainder:true},
-    {id:2,text:'teacher appointment',day:'feb 6th at 1:30pm',remainder:true}])
+  const [tasks, setTasks] = useState([]);
 
     
 //add task
@@ -37,9 +34,9 @@ function App() {
 
   return (
     <div className="container">
-    <Header onClick={onClick} />
+    <Header onClick={onClick} btnText={showAddTask?'Cancel':'Add Task'} color={showAddTask?'red':'#06d892'}/>
     {showAddTask&& <AddTask onAdd={addTask}/>}
-    {tasks.length>0?<Tasks tasks={tasks} onToggle={toggleReminder} onDelete={deleteTask}/>:'No Tasks to Show'}
+    {tasks.length>0?<Tasks tasks={tasks} onToggle={toggleReminder} onDelete={deleteTask}/>:'No Tasks to Show, Add task using above button'}
     </div>
   );
 }
